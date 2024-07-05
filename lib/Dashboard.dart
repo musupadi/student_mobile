@@ -1,5 +1,6 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:student_mobile/UI/Course.dart';
 import 'package:student_mobile/UI/Home.dart';
 
 class Dashboard extends StatefulWidget {
@@ -21,7 +22,7 @@ class _DashboardState extends State<Dashboard> {
   }
   final List<Widget>tabs = [
     Home(),
-    Text("data2"),
+    Course(),
     Text("data3"),
     Text("data3"),
     Text("data3"),
