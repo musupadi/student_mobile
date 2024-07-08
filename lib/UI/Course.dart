@@ -182,7 +182,7 @@ class _CourseState extends State<Course> {
                             labelText: 'Search',
                             suffixIcon: InkWell(
                                 onTap: () {
-                                  _showModalBottomSheet();z
+                                  _showModalBottomSheet();
                                 },
                                 child: Icon(Icons.abc)),
                             border: InputBorder.none,

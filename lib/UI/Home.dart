@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_mobile/Constant/Colors.dart';
 import 'package:student_mobile/Constant/Size.dart';
 
 class Home extends StatefulWidget {
@@ -55,8 +56,16 @@ class _HomeState extends State<Home> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.add,size: 50,),
-                      Icon(Icons.add,size: 50,)
+                      Image.asset(
+                        "assets/img/Chat.png",
+                        height: 50,
+                        width: 50,
+                      ),
+                      Image.asset(
+                        "assets/img/Avatar.png",
+                        height: 50,
+                        width: 50,
+                      ),
                     ],
                   )
               )
@@ -89,9 +98,10 @@ class _HomeState extends State<Home> {
                     children: [
                       Row(
                         children: [
-                          Icon(
-                            Icons.qr_code,
-                            size: 50,
+                          Image.asset(
+                            "assets/img/Scan.png",
+                            width: 50,
+                            height: 50,
                           ),
                           Expanded(
                             child: Row(
@@ -104,7 +114,18 @@ class _HomeState extends State<Home> {
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
                                       Text("Point"),
-                                      Text("750")
+                                      Row(
+                                        crossAxisAlignment:CrossAxisAlignment.center,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(
+                                            "assets/img/Coin.png",
+                                            width: 10,
+                                            height: 10,
+                                          ),
+                                          Text("750"),
+                                        ],
+                                      )
                                     ],
                                   ),
                                 ),
@@ -170,13 +191,15 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N1(),
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.book,color: Colors.white,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Academic.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
@@ -196,13 +219,15 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N2(),
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.track_changes,color: Colors.white,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Semester.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
@@ -227,19 +252,24 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N3(),
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.abc,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Point.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Academic",textAlign: TextAlign.center,style: TextStyle(
-                                  fontSize: FontSizeExtraSmall()
-                              ),),
+                              child: Text("Poin",textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: FontSizeExtraSmall(),
+                                    color: Colors.white
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -250,19 +280,25 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N1()
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.abc,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Study.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Semester\nAntara",textAlign: TextAlign.center,style: TextStyle(
-                                  fontSize: FontSizeExtraSmall()
-                              ),),
+                              child: Text("Study Plan",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: FontSizeExtraSmall(),
+                                    color: Colors.white
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -277,19 +313,24 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N4(),
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.abc,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Task.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Academic",textAlign: TextAlign.center,style: TextStyle(
-                                  fontSize: FontSizeExtraSmall()
-                              ),),
+                              child: Text("Task",textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: FontSizeExtraSmall(),
+                                    color: Colors.white
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -300,19 +341,25 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N5(),
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.abc,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Achievment.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Semester\nAntara",textAlign: TextAlign.center,style: TextStyle(
-                                  fontSize: FontSizeExtraSmall()
-                              ),),
+                              child: Text("Achievement",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: FontSizeExtraSmall(),
+                                    color: Colors.white
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -327,19 +374,24 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N6(),
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.abc,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Quiz.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Academic",textAlign: TextAlign.center,style: TextStyle(
-                                  fontSize: FontSizeExtraSmall()
-                              ),),
+                              child: Text("Quiz",textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: FontSizeExtraSmall(),
+                                    color: Colors.white
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -350,19 +402,25 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N7(),
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.abc,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Payment.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Semester\nAntara",textAlign: TextAlign.center,style: TextStyle(
-                                  fontSize: FontSizeExtraSmall()
-                              ),),
+                              child: Text("Payment",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: FontSizeExtraSmall(),
+                                    color: Colors.white
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -377,19 +435,24 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N4(),
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.abc,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Liblary.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Academic",textAlign: TextAlign.center,style: TextStyle(
-                                  fontSize: FontSizeExtraSmall()
-                              ),),
+                              child: Text("Liblary Area",textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: FontSizeExtraSmall(),
+                                    color: Colors.white
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -400,19 +463,25 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N8(),
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.abc,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Report.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Semester\nAntara",textAlign: TextAlign.center,style: TextStyle(
-                                  fontSize: FontSizeExtraSmall()
-                              ),),
+                              child: Text("Report Service",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: FontSizeExtraSmall(),
+                                    color: Colors.white
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -427,19 +496,24 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N3(),
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.abc,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Project.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Academic",textAlign: TextAlign.center,style: TextStyle(
-                                  fontSize: FontSizeExtraSmall()
-                              ),),
+                              child: Text("Final Project",textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: FontSizeExtraSmall(),
+                                    color: Colors.white
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -450,19 +524,25 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N6(),
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.abc,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Leave.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Semester\nAntara",textAlign: TextAlign.center,style: TextStyle(
-                                  fontSize: FontSizeExtraSmall()
-                              ),),
+                              child: Text("Academic Leave",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: FontSizeExtraSmall(),
+                                    color: Colors.white
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -477,19 +557,24 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N1(),
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.abc,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Glossary.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Academic",textAlign: TextAlign.center,style: TextStyle(
-                                  fontSize: FontSizeExtraSmall()
-                              ),),
+                              child: Text("Glossary",textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: FontSizeExtraSmall(),
+                                    color: Colors.white
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -500,19 +585,25 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N9(),
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.abc,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Blog.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Semester\nAntara",textAlign: TextAlign.center,style: TextStyle(
-                                  fontSize: FontSizeExtraSmall()
-                              ),),
+                              child: Text("Blog Admin",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: FontSizeExtraSmall(),
+                                    color: Colors.white
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -527,48 +618,32 @@ class _HomeState extends State<Home> {
                         height: 80,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
+                          color: N10(),
                         ),
                         child: Column(
                           children: [
                             Expanded(
                                 flex: 2,
-                                child: Icon(Icons.abc,size: 50)
+                                child: Image.asset(
+                                  "assets/img/Activity.png",width: 50,height: 50,
+                                )
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Academic",textAlign: TextAlign.center,style: TextStyle(
-                                  fontSize: FontSizeExtraSmall()
-                              ),),
+                              child: Text("My Activity",textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: FontSizeExtraSmall(),
+                                    color: Colors.white
+                                ),
+                              ),
                             )
                           ],
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.blue,
-                        ),
-                        child: Column(
-                          children: [
-                            Expanded(
-                                flex: 2,
-                                child: Icon(Icons.abc,size: 50)
-                            ),
-                            Expanded(
-                              flex: 1,
-                              child: Text("Semester\nAntara",textAlign: TextAlign.center,style: TextStyle(
-                                  fontSize: FontSizeExtraSmall()
-                              ),),
-                            )
-                          ],
-                        ),
-                      ),
+                      //Isi Disini
                     ],
                   ),
+
 
                 ],
               ),
