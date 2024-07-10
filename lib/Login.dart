@@ -1,5 +1,14 @@
+import 'dart:convert';
+
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_session_manager/flutter_session_manager.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:student_mobile/Constant/Colors.dart';
+import 'package:student_mobile/Dashboard.dart';
+import 'package:http/http.dart' as http;
+import 'package:student_mobile/Model/Ascendant.dart';
+import 'API/Restserver.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -9,6 +18,79 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  bool passenable = true; //boolean value to track password view enable disable.
+  TextEditingController controllerUsername = new TextEditingController();
+  TextEditingController controllerPassword = new TextEditingController();
+  bool isLoading = false;
+  LoginSuccess (String name){
+    AwesomeDialog(
+        context: context,
+        dismissOnTouchOutside: true,
+        dismissOnBackKeyPress: false,
+        dialogType: DialogType.success,
+        animType: AnimType.scale,
+        title: "Login Succes",
+        desc: "Selamat Datang "+name,
+        btnOkOnPress: () {
+
+        },
+        headerAnimationLoop: false
+    )..show();
+  }
+  Logins() async{
+    int timeout = 5;
+
+    setState(() => isLoading=true);
+    try{
+      final response = await http.post(
+          Uri.parse(getServerName()+stringLogin()),
+          body: {
+            "Username": controllerUsername.text,
+            "Password": controllerPassword.text
+          }).timeout(Duration(seconds: timeout));
+
+      print(response.body.toString());
+      String data= jsonDecode(response.body)['data'].toString();
+      if(data == "Data Tidak Ditemukan"){
+        Message("Failed to Login", jsonDecode(response.body)['data'].toString(), context);
+      }else{
+        var sessionManager = SessionManager();
+        await sessionManager.set("apikey", jsonDecode(response.body)['data'][0]['APIKey'].toString());
+        await sessionManager.set("photo", jsonDecode(response.body)['data'][0]['Photo'].toString());
+        await sessionManager.set("nip", jsonDecode(response.body)['data'][0]['NIP'].toString());
+        await sessionManager.set("name", jsonDecode(response.body)['data'][0]['Name'].toString());
+
+        String name = await SessionManager().get("name").toString();
+        LoginSuccess(name.toString());
+        // FailedMessage("Success", jsonDecode(response.body)['data'][0]['Name'].toString(), context);
+      }
+      // Obtain shared preferences.
+      ;
+      // //
+      // //
+      // String? name = prefs.getString('name');
+      // String? id = prefs.getString("id");
+      // String? username = prefs.getString("username");
+
+      // var sessionManager = SessionManager();
+      // await sessionManager.set("id", jsonDecode(response.body)['data'][0]['id'].toString());
+      // await sessionManager.set("username", jsonDecode(response.body)['data'][0]['username'].toString());
+      // await sessionManager.set("name", jsonDecode(response.body)['data'][0]['nama'].toString());
+
+      // String name = await SessionManager().get("name").toString();
+      // LoginSuccess(name.toString());
+
+    }on Error catch(e){
+
+    }
+
+  }
+  @override
+  void initState() {
+    // Get.to(logins);
+    super.initState();
+    controllerUsername.addListener(() => setState((){}));
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,8 +119,9 @@ class _LoginState extends State<Login> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       TextField(
+                        controller: controllerUsername,
                         decoration: InputDecoration(
-                          labelText: 'Your Email',
+                          labelText: 'Username',
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8.0),
                           ),
@@ -47,14 +130,23 @@ class _LoginState extends State<Login> {
                       SizedBox(height: 20),
                       // Password TextField
                       TextField(
-                        obscureText: true,
+                        controller: controllerPassword,
                         decoration: InputDecoration(
                           labelText: 'Password',
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8.0),
                           ),
-                          suffixIcon: Icon(Icons.visibility_off),
+                            suffixIcon: IconButton(
+                                icon: passenable
+                                    ? Icon(Icons.visibility_off)
+                                    : Icon(Icons.visibility),
+                                onPressed: () =>
+                                    setState(() => passenable = !passenable)
+                            )
                         ),
+                        obscureText: passenable,
+                        keyboardType: TextInputType.emailAddress,
+                        textInputAction: TextInputAction.done,
                       ),
                       SizedBox(height: 10),
                       // Forget Password
@@ -68,7 +160,11 @@ class _LoginState extends State<Login> {
                       SizedBox(height: 20),
                       // Log In Button
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          setState(() {
+                             Logins();
+                          });
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,
                           padding: EdgeInsets.symmetric(horizontal: 100, vertical: 15),

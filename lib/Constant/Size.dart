@@ -7,7 +7,7 @@ double FontSizeMedium(){
   return 18;
 }
 double FontSizeSmall(){
-  return 15;
+  return 11;
 }
 double FontSizeExtraSmall(){
   return 8;

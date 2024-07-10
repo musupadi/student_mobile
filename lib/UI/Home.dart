@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
         Container(
           height: 200,
           width: double.maxFinite,
-          color: Colors.blue,
+          color: PUleft(),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -187,26 +187,37 @@ class _HomeState extends State<Home> {
                     children: [
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N1(),
-                        ),
+                        width: 70,
+                        height: 70,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N1(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Academic.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Academic.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
                               child: Text("Academic",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  fontSize: FontSizeExtraSmall(),
-                                  color: Colors.white
+                                  fontSize: FontSizeSmall(),
+                                  color: N1(),
+                                  fontWeight: FontWeight.bold
                                 ),
                               ),
                             )
@@ -215,27 +226,37 @@ class _HomeState extends State<Home> {
                       ),
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N2(),
-                        ),
+                        width: 70,
+                        height: 100,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N2(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Semester.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Semester.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Semester\nAntara",
-                                textAlign: TextAlign.center,
+                              child: Text("Semester\nAntara",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: FontSizeExtraSmall(),
-                                    color: Colors.white
+                                    fontSize: FontSizeSmall(),
+                                    color: N2(),
+                                    fontWeight: FontWeight.bold
                                 ),
                               ),
                             )
@@ -248,26 +269,37 @@ class _HomeState extends State<Home> {
                     children: [
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N3(),
-                        ),
+                        width: 70,
+                        height: 70,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N3(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Point.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Point.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
                               child: Text("Poin",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: FontSizeExtraSmall(),
-                                    color: Colors.white
+                                    fontSize: FontSizeSmall(),
+                                    color: N3(),
+                                    fontWeight: FontWeight.bold
                                 ),
                               ),
                             )
@@ -276,27 +308,37 @@ class _HomeState extends State<Home> {
                       ),
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N1()
-                        ),
+                        width: 70,
+                        height: 100,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N1(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Study.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Study.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Study Plan",
-                                textAlign: TextAlign.center,
+                              child: Text("Study Plan",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: FontSizeExtraSmall(),
-                                    color: Colors.white
+                                    fontSize: FontSizeSmall(),
+                                    color: N1(),
+                                    fontWeight: FontWeight.bold
                                 ),
                               ),
                             )
@@ -309,26 +351,37 @@ class _HomeState extends State<Home> {
                     children: [
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N4(),
-                        ),
+                        width: 70,
+                        height: 70,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N4(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Task.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Task.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
                               child: Text("Task",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: FontSizeExtraSmall(),
-                                    color: Colors.white
+                                    fontSize: FontSizeSmall(),
+                                    color: N4(),
+                                    fontWeight: FontWeight.bold
                                 ),
                               ),
                             )
@@ -337,27 +390,37 @@ class _HomeState extends State<Home> {
                       ),
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N5(),
-                        ),
+                        width: 70,
+                        height: 100,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N5(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Achievment.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Achievment.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Achievement",
-                                textAlign: TextAlign.center,
+                              child: Text("Achievement",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: FontSizeExtraSmall(),
-                                    color: Colors.white
+                                    fontSize: FontSizeSmall(),
+                                    color: N5(),
+                                    fontWeight: FontWeight.bold
                                 ),
                               ),
                             )
@@ -370,26 +433,37 @@ class _HomeState extends State<Home> {
                     children: [
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N6(),
-                        ),
+                        width: 70,
+                        height: 70,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N6(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Quiz.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Quiz.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
                               child: Text("Quiz",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: FontSizeExtraSmall(),
-                                    color: Colors.white
+                                    fontSize: FontSizeSmall(),
+                                    color: N6(),
+                                    fontWeight: FontWeight.bold
                                 ),
                               ),
                             )
@@ -398,27 +472,37 @@ class _HomeState extends State<Home> {
                       ),
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N7(),
-                        ),
+                        width: 70,
+                        height: 100,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N7(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Payment.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Payment.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Payment",
-                                textAlign: TextAlign.center,
+                              child: Text("Payment",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: FontSizeExtraSmall(),
-                                    color: Colors.white
+                                    fontSize: FontSizeSmall(),
+                                    color: N7(),
+                                    fontWeight: FontWeight.bold
                                 ),
                               ),
                             )
@@ -431,26 +515,37 @@ class _HomeState extends State<Home> {
                     children: [
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N4(),
-                        ),
+                        width: 70,
+                        height: 70,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N7(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Liblary.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Liblary.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Liblary Area",textAlign: TextAlign.center,
+                              child: Text("Liblary",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: FontSizeExtraSmall(),
-                                    color: Colors.white
+                                    fontSize: FontSizeSmall(),
+                                    color: N7(),
+                                    fontWeight: FontWeight.bold
                                 ),
                               ),
                             )
@@ -459,27 +554,37 @@ class _HomeState extends State<Home> {
                       ),
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N8(),
-                        ),
+                        width: 70,
+                        height: 100,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N8(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Report.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Report.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Report Service",
-                                textAlign: TextAlign.center,
+                              child: Text("Report Service",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: FontSizeExtraSmall(),
-                                    color: Colors.white
+                                    fontSize: FontSizeSmall(),
+                                    color: N8(),
+                                    fontWeight: FontWeight.bold
                                 ),
                               ),
                             )
@@ -492,26 +597,37 @@ class _HomeState extends State<Home> {
                     children: [
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N3(),
-                        ),
+                        width: 70,
+                        height: 70,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N3(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Project.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Project.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
                               child: Text("Final Project",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: FontSizeExtraSmall(),
-                                    color: Colors.white
+                                    fontSize: FontSizeSmall(),
+                                    color: N3(),
+                                    fontWeight: FontWeight.bold
                                 ),
                               ),
                             )
@@ -520,27 +636,37 @@ class _HomeState extends State<Home> {
                       ),
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N6(),
-                        ),
+                        width: 70,
+                        height: 100,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N6(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Leave.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Leave.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Academic Leave",
-                                textAlign: TextAlign.center,
+                              child: Text("Academic Leave",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: FontSizeExtraSmall(),
-                                    color: Colors.white
+                                    fontSize: FontSizeSmall(),
+                                    color: N8(),
+                                    fontWeight: FontWeight.bold
                                 ),
                               ),
                             )
@@ -553,26 +679,37 @@ class _HomeState extends State<Home> {
                     children: [
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N1(),
-                        ),
+                        width: 70,
+                        height: 70,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N6(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Glossary.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Glossary.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
                               child: Text("Glossary",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: FontSizeExtraSmall(),
-                                    color: Colors.white
+                                    fontSize: FontSizeSmall(),
+                                    color: N3(),
+                                    fontWeight: FontWeight.bold
                                 ),
                               ),
                             )
@@ -581,27 +718,37 @@ class _HomeState extends State<Home> {
                       ),
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N9(),
-                        ),
+                        width: 70,
+                        height: 100,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N9(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Blog.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Blog.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
-                              child: Text("Blog Admin",
-                                textAlign: TextAlign.center,
+                              child: Text("Blog Admin",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: FontSizeExtraSmall(),
-                                    color: Colors.white
+                                    fontSize: FontSizeSmall(),
+                                    color: N9(),
+                                    fontWeight: FontWeight.bold
                                 ),
                               ),
                             )
@@ -614,26 +761,37 @@ class _HomeState extends State<Home> {
                     children: [
                       Container(
                         margin: EdgeInsets.all(5),
-                        width: 80,
-                        height: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: N10(),
-                        ),
+                        width: 70,
+                        height: 100,
                         child: Column(
                           children: [
-                            Expanded(
-                                flex: 2,
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: N10(),
+                              ),
+                              height: 50,
+                              width: 50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
                                 child: Image.asset(
-                                  "assets/img/Activity.png",width: 50,height: 50,
-                                )
+                                  "assets/img/Activity.png",
+                                  width: 30,
+                                  height: 30,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Expanded(
                               flex: 1,
                               child: Text("My Activity",textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontSize: FontSizeExtraSmall(),
-                                    color: Colors.white
+                                    fontSize: FontSizeSmall(),
+                                    color: N10(),
+                                    fontWeight: FontWeight.bold
                                 ),
                               ),
                             )

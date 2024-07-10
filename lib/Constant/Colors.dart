@@ -35,3 +35,13 @@ Color N10(){
 Color Background(){
   return Color.fromRGBO(155, 155, 155, 1);
 }
+
+Color PUleft(){
+  return Color.fromRGBO(20, 56, 140, 1);
+}
+Color PUcenter(){
+  return Color.fromRGBO(215, 26, 34, 1);
+}
+Color PUright(){
+  return Color.fromRGBO(174, 158, 104, 1);
+}

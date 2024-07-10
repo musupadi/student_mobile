@@ -1,5 +1,6 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:student_mobile/Constant/Colors.dart';
 import 'package:student_mobile/UI/Course.dart';
 import 'package:student_mobile/UI/Home.dart';
 
@@ -35,7 +36,7 @@ class _DashboardState extends State<Dashboard> {
         bottomNavigationBar: ConvexAppBar.badge(
           const <int,dynamic>{6:'99+'},
           style: TabStyle.fixedCircle,
-          backgroundColor: Colors.blue,
+          backgroundColor: PUleft(),
           activeColor: Colors.white,
           items: <TabItem>[
             TabItem(icon: Icons.home,title: "Home"),
